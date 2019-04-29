@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/js/my.js"></script>
+  
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,8 +25,7 @@
 
     <link rel="stylesheet" href="/BoxCount/assets/css/style.css?v=67d0916a925d95de44b2fbe759e46500f0c043d0">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/js/my.js"></script>
+   
 
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -47,8 +50,13 @@
       <option value="IMG/PlayDistributions/ARI.png">Cardinals</option>
       <option value="IMG/PlayDistributions/LAR.png">Rams</option>
       </select>
-      <div style="height:200px; width:250px;border:1px solid red;"><img id="swapImg" src="IMG/PlayDistributions/LeagueAvg.png"></div>
+        
+     <div id="swap" style="height:200px; width:250px;border:1px solid red;">
+     <input type="hidden" id="state" name="state" value="noImage"/>
+   
 
+});
+    </div>
       </section>
       
 
