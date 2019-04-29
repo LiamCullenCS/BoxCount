@@ -1,14 +1,5 @@
-$(document).ready(function() {
-
-    $("#sel").live("change", function() {
-        if ($("#state").value() == "noImage") {    
-            $("#swap").append(
-                "<img id='swapImg' src='" + $(this).value() + "'>"
-            );
-            $("#state").value('image')
-        } else {
-           $("#swapImg").attr("src", $(this).value());
-        }
-    });
-
-});
+$(function(){
+  $("#sel").on('change', function(){
+    $("#imageToSwap﻿").attr("src", $(this).find(":selected").attr("data-src"));
+  });
+});	
