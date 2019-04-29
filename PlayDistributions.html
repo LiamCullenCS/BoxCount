@@ -23,6 +23,20 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="/js/my.js"></script>
+    <script>
+       $(document).ready(function() {
+
+        $("#sel").live("change", function() {
+          if ($("#state").val() == "noImage") {    
+              $("#swap").append(
+                  "<img id='swapImg' src='" + $(this).val() + "'>"
+              );
+              $("#state").val('image')
+          } else {
+             $("#swapImg").attr("src", $(this).val());
+          }
+        });
+     </script>
 
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -50,6 +64,9 @@
         
      <div id="swap" style="height:200px; width:250px;border:1px solid red;">
      <input type="hidden" id="state" name="state" value="noImage"/>
+   
+
+});
     </div>
       </section>
       
