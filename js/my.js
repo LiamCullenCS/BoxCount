@@ -1,6 +1,14 @@
 $(document).ready(function() {
-	$("#sel").change(function() {
-		var imgUrl = $(this).val();
-		$("#swapImg").attr("src", imgUrl);
-	});
+
+    $("#sel").live("change", function() {
+        if ($("#state").val() == "noImage") {    
+            $("#swap").append(
+                "<img id='swapImg' src='" + $(this).val() + "'>"
+            );
+            $("#state").val('image')
+        } else {
+           $("#swapImg").attr("src", $(this).val());
+        }
+    });
+
 });
