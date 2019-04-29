@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
     $("#sel").live("change", function() {
-        if ($("#state").val() == "noImage") {    
+        if ($("#state").value() == "noImage") {    
             $("#swap").append(
-                "<img id='swapImg' src='" + $(this).val() + "'>"
+                "<img id='swapImg' src='" + $(this).value() + "'>"
             );
-            $("#state").val('image')
+            $("#state").value('image')
         } else {
-           $("#swapImg").attr("src", $(this).val());
+           $("#swapImg").attr("src", $(this).value());
         }
     });
 
