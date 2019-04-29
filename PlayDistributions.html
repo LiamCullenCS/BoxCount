@@ -20,6 +20,8 @@
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/BoxCount/assets/css/style.css?v=67d0916a925d95de44b2fbe759e46500f0c043d0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -45,6 +47,12 @@
       </select>
       <div style="height:200px; width:250px;border:1px solid red;"><img id="swapImg" src="IMG/PlayDistributions/LeagueAvg.png"></div>
 
+        $(document).ready(function() {
+            $("#sel").change(function() {
+                var imgUrl = $(this).val();
+                $("#swapImg").attr("src", imgUrl);
+            });
+        });
       </section>
       
 
