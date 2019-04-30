@@ -3,13 +3,7 @@
   
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
    <script>
-	$(document).ready(function(){
-		$('#myselection').on('change', function(){
-			var demovalue = $(this).val(); 
-			$("div.myDiv").hide();
-			$("#show"+demovalue).show();
-		});
-	});
+
 	</script>
   
   <head>
@@ -54,22 +48,22 @@
 	 
 	<select id="myselection">
 	  <option value="">Select Team</option>
-      <option value="SEA">Seahawks</option>
-      <option value="SF">49ers</option>
-      <option value="ARI">Cardinals</option>
-      <option value="LAR">Rams</option>
+      <option value="IMG/PlayDistributions/SEA.png">Seahawks</option>
+      <option value="IMG/PlayDistributions/SF.png">49ers</option>
+      <option value="IMG/PlayDistributions/ARI.png">Cardinals</option>
+      <option value="IMG/PlayDistributions/LAR.png">Rams</option>
 	</select>
 	
-	<div id="showOne" class="myDiv">
+	<div id="showIMG/PlayDistributions/SEA.png" class="myDiv">
 	 <img src="IMG/PlayDistributions/SEA.png" alt="SEA" class="img-responsive img-thumbnail"/><span>Seahawks</span>
 	</div>
-	<div id="showTwo" class="myDiv">
+	<div id="showIMG/PlayDistributions/SF.png" class="myDiv">
 	 <img src="IMG/PlayDistributions/SF.png" alt="HR" class="img-responsive img-thumbnail"/><span>49ers</span>
 	</div>
-	<div id="showThree" class="myDiv">
+	<div id="showIMG/PlayDistributions/ARI.png" class="myDiv">
 	 <img src="IMG/PlayDistributions/ARI.png" alt="Developer" class="img-responsive img-thumbnail"/><span>Cardinals</span>
 	</div>
-	<div id="showFour" class="myDiv">
+	<div id="showIMG/PlayDistributions/LAR.png" class="myDiv">
 	 <img src="IMG/PlayDistributions/LAR.png" alt="Developer" class="img-responsive img-thumbnail"/><span>Rams</span>
 	</div>
 
