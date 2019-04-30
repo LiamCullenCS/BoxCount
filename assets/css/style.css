@@ -1,3 +1,5 @@
+---
+---
 @import "{{ jekyll-theme-minimal }}";
 
 .column{
@@ -9,6 +11,6 @@
 .row::after{
 	content: "";
 	clear: both;
-	display: table;
+	display:
 }
 
