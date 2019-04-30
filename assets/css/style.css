@@ -1,13 +1,14 @@
----
----
-
 @import "{{ jekyll-theme-minimal }}";
 
-.row{
-	display:flex;
-}
-
 .column{
-	flex: 50%;
+	float: left;
+	width: 50%;
 	padding: 5px;
 }
+
+.row::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
