@@ -20,9 +20,25 @@
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" type ="text/css" href="/BoxCount/assets/css/style.css">
-    <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+
+	<style>
+		ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+		
+		li{
+			float: left;
+		}
+		
+		li a:hover{
+			background-color: #111;
+		}
+	</style>
+	
   </head>
   <body>
     <div class="wrapper">
@@ -30,10 +46,13 @@
 		<a href="index.html"><img src="IMG/BOXLOGO.png" width ="200" height ="130" class = "inline"/></a>
       </header>
       <section>
-
-       <a class="nav-link" href="PlayDistributions.html"> Play Distributions  </a>
-       <a class="nav-link" href="ELORankings.html">  ELO Rankings </a>
-       
+	
+	<ul>
+	<li><a class="active" href="index.html">Home</a></li>
+	<li><a class="nav-link" href="PlayDistributions.html">Play Distributions</a></li>
+	<li><a class="nav-link" href="ELORankings.html">ELO Rankings</a></li>
+	</ul>
+	
       </section>
       <footer>
         
