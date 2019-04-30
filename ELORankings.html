@@ -23,17 +23,6 @@
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" type ="text/css" href="/BoxCount/assets/css/style.css">
-    <style>
-	table {
-		border-collapse: collapse;
-		border: 2px black solid;
-		font: 12px sans-serif;
-		}
-	td {
-		border: 1px black-solid;
-		padding: 5px;
-	}
-	</style>
 	
   </head>
   <body>
@@ -41,33 +30,35 @@
       <header>
 		<a href="index.html"><img src="IMG/BOXLOGO.png" width ="200" height ="130" class = "inline"/></a>
       </header>
-      <section>
+
+    <section>
 
 	<a class="nav-link" href="PlayDistributions.html"> Play Distributions  </a>
     <a class="nav-link" href="ELORankings.html">  ELO Rankings </a>
         
-      
-    <script src="d3.min.js?v=3.2.8"></script>
-	<script type="text/javascript"charset="utf-8">
-			d3.text("ELO Rankings.csv", function(data) {
-				var parsedCSV = d3.csv.parseRows(data);
+	<table datasrc='#data'>
+	<thead>
+		<tr><th>Team</th><th>Ratings</th><th>Wins</th><th>Losses</th><th>Ties</th></tr>
+	</thead>
 
-				var container = d3.select("body")
-					.append("table")
+    <tbody> <tr>
+		 <td><span datafld='team'> </span></td>
+		 <td><span datafld='rating'></span></td>
+		 <td><span datafld='wins'> </span></td>
+		 <td><span datafld='losses'> </span></td>
+		 <td><span datafld='ties'> </span></td>
+    </tbody>
 
-					.selectAll("tr")
-						.data(parsedCSV).enter()
-						.append("tr")
+</table>
 
-					.selectAll("td")
-						.data(function(d) { return d; }).enter()
-						.append("td")
-						.text(function(d) { return d; });
-			});
-        </script>
-      
 
-      </section>
+<object ID=data classid="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83">
+  <param name="DataURL" value="ELO Rankings.csv">
+  <param name="UseHeader" value="true">
+</object>
+	
+
+    </section>
       <footer>
         
         <p class="view"><a href="https://github.com/LiamCullenCS/BoxCount">View the Project on GitHub <small>LiamCullenCS/BoxCount</small></a></p>
