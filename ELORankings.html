@@ -30,7 +30,7 @@
   <body>
     <div class="wrapper">
       <header>
-		<a href="index.html"><img src="IMG/BOXLOGO.png" width ="172" height ="114" class = "inline"/></a>
+		<a href="index.html"><img src="IMG/BOXLOGO.png" width ="200" height ="130" class = "inline"/></a>
       </header>
       <section>
 
@@ -52,6 +52,26 @@
 
           </tbody>
       </table>
+	  
+	  <script src="d3.min.js?v=3.2.8"></script>
+
+        <script type="text/javascript"charset="utf-8">
+            d3.text("ELO Rankings.csv", function(data) {
+                var parsedCSV = d3.csv.parseRows(data);
+
+                var container = d3.select("body")
+                    .append("table")
+
+                    .selectAll("tr")
+                        .data(parsedCSV).enter()
+                        .append("tr")
+
+                    .selectAll("td")
+                        .data(function(d) { return d; }).enter()
+                        .append("td")
+                        .text(function(d) { return d; });
+            });
+        </script>
       
 
       </section>
