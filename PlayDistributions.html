@@ -25,6 +25,9 @@
     <link rel="stylesheet" type ="text/css" href="/BoxCount/assets/css/style.css">
     
 	<style>
+	*{
+		box-sizing: border-box;
+		}
 	.column{
 		float: left;
 		width: 50%;
@@ -61,7 +64,8 @@
 		</div>
 		<div class="column">
 			<img id="imageToSwap" src="" style = "width:100%">
-			
+		</div>
+	</div>
 	
 	<select id="myselection" onChange="swapImage()">
 	  <option value="">Select Team</option>
@@ -99,8 +103,6 @@
 	  <option value="IMG/PlayDistributions/TEN.png">Titans</option>
 	</select>
 	
-		</div>
-	</div>
 	<script type = "text/javascript">
 	function swapImage(){
 		var image = document.getElementById("imageToSwap");
