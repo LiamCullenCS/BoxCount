@@ -46,13 +46,7 @@
        
       <p> </p>
 	 
-	<select id="myselection">
-	  <option value="">Select Team</option>
-      <option value="IMG/PlayDistributions/SEA.png">Seahawks</option>
-      <option value="IMG/PlayDistributions/SF.png">49ers</option>
-      <option value="IMG/PlayDistributions/ARI.png">Cardinals</option>
-      <option value="IMG/PlayDistributions/LAR.png">Rams</option>
-	</select>
+
 	
 	<div id="showIMG/PlayDistributions/SEA.png" class="myDiv">
 	 <img src="IMG/PlayDistributions/SEA.png" alt="SEA" class="img-responsive img-thumbnail"/><span>Seahawks</span>
@@ -66,6 +60,27 @@
 	<div id="showIMG/PlayDistributions/LAR.png" class="myDiv">
 	 <img src="IMG/PlayDistributions/LAR.png" alt="Developer" class="img-responsive img-thumbnail"/><span>Rams</span>
 	</div>
+	
+	
+	<img id="imageToSwap" src="IMG/PlayDistributions/LeagueAvg.png" />
+	<br/> <br/>
+	
+	<select id="myselection" onChange="swapImage()">
+	  <option value="">Select Team</option>
+      <option value="IMG/PlayDistributions/SEA.png">Seahawks</option>
+      <option value="IMG/PlayDistributions/SF.png">49ers</option>
+      <option value="IMG/PlayDistributions/ARI.png">Cardinals</option>
+      <option value="IMG/PlayDistributions/LAR.png">Rams</option>
+	</select>
+	
+	<script type = "text/javascript">
+	function swapImage(){
+		var image = document.getElementById("imageToSwap");
+		var dropd = document.getElementById("myselection");
+		image.src = dropd.value;
+	};
+	</script>
+	
 
     </section>
       
