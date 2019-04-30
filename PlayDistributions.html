@@ -2,7 +2,15 @@
 <html lang="en-US">
   
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/js/my.js"></script>
+   <script>
+	$(document).ready(function(){
+		$('#myselection').on('change', function(){
+			var demovalue = $(this).val(); 
+			$("div.myDiv").hide();
+			$("#show"+demovalue).show();
+		});
+	});
+	</script>
   
   <head>
     <meta charset="UTF-8">
