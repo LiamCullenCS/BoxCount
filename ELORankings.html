@@ -23,9 +23,18 @@
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" type ="text/css" href="/BoxCount/assets/css/style.css">
-    <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    <style>
+	table {
+		border-collapse: collapse;
+		border: 2px black solid;
+		font: 12px sans-serif;
+		}
+	td {
+		border: 1px black-solid;
+		padding: 5px;
+	}
+	</style>
+	
   </head>
   <body>
     <div class="wrapper">
@@ -34,43 +43,27 @@
       </header>
       <section>
 
-       <a class="nav-link" href="PlayDistributions.html"> Play Distributions  </a>
-       <a class="nav-link" href="ELORankings.html">  ELO Rankings </a>
+	<a class="nav-link" href="PlayDistributions.html"> Play Distributions  </a>
+    <a class="nav-link" href="ELORankings.html">  ELO Rankings </a>
         
-        
-     <table class="table table-hover">
-          <thead>
-              <tr>
-                  <th>Team</th>
-                  <th>Rating</th>
-                  <th>Wins</th>
-                  <th>Losses</th>
-                  <th>Ties</th>
-              </tr>
-          </thead>
-          <tbody>
+      
+    <script src="d3.min.js?v=3.2.8"></script>
+	<script type="text/javascript"charset="utf-8">
+			d3.text("ELO Rankings.csv", function(data) {
+				var parsedCSV = d3.csv.parseRows(data);
 
-          </tbody>
-      </table>
-	  
-	  <script src="d3.min.js?v=3.2.8"></script>
+				var container = d3.select("body")
+					.append("table")
 
-        <script type="text/javascript"charset="utf-8">
-            d3.text("ELO Rankings.csv", function(data) {
-                var parsedCSV = d3.csv.parseRows(data);
+					.selectAll("tr")
+						.data(parsedCSV).enter()
+						.append("tr")
 
-                var container = d3.select("body")
-                    .append("table")
-
-                    .selectAll("tr")
-                        .data(parsedCSV).enter()
-                        .append("tr")
-
-                    .selectAll("td")
-                        .data(function(d) { return d; }).enter()
-                        .append("td")
-                        .text(function(d) { return d; });
-            });
+					.selectAll("td")
+						.data(function(d) { return d; }).enter()
+						.append("td")
+						.text(function(d) { return d; });
+			});
         </script>
       
 
