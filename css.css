@@ -14,14 +14,3 @@
     border: 1px solid #d47c7c;
     margin: 8px auto;
 }
-.column{
-	float:left;
-	width:50%;
-	padding:5px;
-}
-
-.row::after{
-	content:"";
-	clear:both;
-	display:table;
-}
