@@ -64,15 +64,8 @@
 		background-color: #111;
 	}
 	
-	.content{
-		max-width: 500px;
-		margin: auto;
-	}
 	</style>
 
-    <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
   </head>
   <body>
 	
@@ -82,8 +75,10 @@
 		<li><a class="nav-link" href="ELORankings.html">ELO Rankings</a></li>
 	</ul>
 
-	<div class = "content">
-	  
+	<div style="width: 50%; margin: 0 auto; padding-top: 20px;">
+
+	<h2 style="text-align:center">Play Distributions, Variance & Maximizing Advantages in the NFL</h2>
+	<p style ="text-align:center">bla bla bla - discuss importance of playcalling, how it relates to EPA. </p>
 	<div class="row">
 		<div class="column">
 			<img src ="IMG/PlayDistributions/LeagueAvg.png" style ="width:100%">
@@ -92,6 +87,8 @@
 			<img id="imageToSwap" src="" style = "width:100%">
 		</div>
 	</div>
+	
+	
 	
 	<select id="myselection" onChange="swapImage()">
 	  <option value="">Select Team</option>
@@ -137,7 +134,8 @@
 	};
 	</script>
 	
-	</div>
+	<hr>
+	
       
 	  	<h2 style="text-align:center;">Expected Points Added per Play</h2>
 	<p style="text-align:left;">After devising an ELO system to rank each teams season long performance, I decided to explore which factors were 
@@ -145,6 +143,7 @@
 	<img src ="IMG/ELO/EPA2018.png" style ="width:100%">
 
 
+</div>
       <footer>
         <p class="view"><a href="https://github.com/LiamCullenCS/BoxCount">View the Project on GitHub <small>LiamCullenCS/BoxCount</small></a></p>    
       </footer>
