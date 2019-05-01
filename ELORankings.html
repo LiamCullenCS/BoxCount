@@ -95,11 +95,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
 <script>
     function arrayToTable(tableData) {
-        var table = $('<table cellspacing="0" style="border-spacing: 0;"></table>');
+        var table = $('<table></table>');
         $(tableData).each(function (i, rowData) {
-            var row = $('<tr style="padding: 1px;"></tr>');
+            var row = $('<tr cellspacing="0"></tr>');
             $(rowData).each(function (j, cellData) {
-                row.append($('<td style="padding: 1px;">'+cellData+'</td>'));
+                row.append($('<td cellspacing="0">'+cellData+'</td>'));
             });
             table.append(row);
         });
