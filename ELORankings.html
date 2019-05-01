@@ -99,7 +99,7 @@
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {
-                row.append($('<td>'+cellData+'</td>'));
+                row.append($('<td style="padding: 0;">'+cellData+'</td>'));
             });
             table.append(row);
         });
