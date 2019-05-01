@@ -82,7 +82,7 @@
 		<li><a class="nav-link" href="ELORankings.html">ELO Rankings</a></li>
 	</ul>
 	
-	<div style="width: 50%; margin: 0 auto; padding-top: 10px;">
+	<div style="width: 50%; margin: 0 auto; padding-top: 20px;">
 	<h2 style="text-align:center;">Ranking NFL Teams</h2>
 	<p style="text-align:center;">Whilst researching various ranking systems across competetive sports and games, I came across the famous ELO rating system, 
 		devised by Arpad Elo. The ELO rating system is interesting to me as it has not been long since it was used to select the top teams for the NCAA College
@@ -124,6 +124,12 @@
 			<p>The ELO system is a fairly simple model for evaluating the skill level of teams. Each time starts with a flat rating
 				of 1000 points. Each team's rating is updated after every game, using the following formula:</p>
 				<img src = "IMG/ELO/ELOFormula.PNG">
+			<p>Using the R package nflscrapR, I collected the results of all 256 games of the 2018 nfl season and tracked each team's rating 
+				throughout the season, and plotted the final results on a dotchart. The results were interesting. Initially I was skeptical of
+				such a simple model, but I was surprised to see that eleven of the top twelve teams in my ELO rankings did in fact make the playoffs. 
+				Also, it exactly predicted the order in seeding in the NFC; Saints 1st, Rams 2nd, Bears 3rd, Cowboys 4th, Seahawks 5th and Eagles 6th.
+				
+				</p>
 		</div>
 	</div>
 	
