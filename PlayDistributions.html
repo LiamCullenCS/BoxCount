@@ -175,8 +175,17 @@
 	<h2 style="text-align:center;">Understanding Variance</h2>
 	<p style="text-align:left;"> bla bla bla - talk about variance & what it can tell us about a teams performance
 								discuss how useful comparing vs league average</p>
-	<img src ="IMG/ELO/Sack Percentage Variation.png" style ="width:100%">
 	
+	<p style="text-align: left;">Select Graphs:</p>
+	
+	<select id="myselection" onChange="swapImage()">
+	  <option value="">Select Team</option>
+      <option value="IMG/PlayDistributions/Sack Percentage Variation.png">Sack Variance</option>
+      <option value="IMG/PlayDistributions/Pass Percentage Variation.png">Pass Variance</option>
+      <option value="IMG/PlayDistributions/Run Percentage Variation.png">Run Variance</option>
+	</select>
+	
+	<img id="imageToSwap" src="IMG/PlayDistributions/Sack Percentage Variation/.png" style = "width:100%">
 
 
 </div>
