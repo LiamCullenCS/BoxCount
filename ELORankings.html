@@ -24,6 +24,21 @@
 
     <link rel="stylesheet" type ="text/css" href="/BoxCount/assets/css/style.css">
 	<style>
+	
+		*{
+			box-sizing: border-box;
+			}
+		.column{
+			float: left;
+			width: 50%;
+			padding: 5px;
+			}
+			
+		.row::after{
+			content: "";
+			clear: both;
+			display: table;
+			}
 		ul{
 			list-style-type: none;
 			margin: 0;
