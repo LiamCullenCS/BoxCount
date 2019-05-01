@@ -67,8 +67,9 @@
 			border: 1px solid #006;
 			border-collapse: collapse;
 		}
-		th, td{
+		tr, td{
 			border: 1px solid #006;
+			padding: 1px;
 		}
 	
 	</style>
@@ -97,9 +98,9 @@
     function arrayToTable(tableData) {
         var table = $('<table></table>');
         $(tableData).each(function (i, rowData) {
-            var row = $('<tr cellspacing="0" style="padding-right:1px;"></tr>');
+            var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {
-                row.append($('<td cellspacing="0" style="padding-right:1px;">'+cellData+'</td>'));
+                row.append($('<td>'+cellData+'</td>'));
             });
             table.append(row);
         });
