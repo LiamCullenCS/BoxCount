@@ -78,33 +78,31 @@
 	<div style="width: 50%; margin: 0 auto; padding-top: 20px;">
 
 	<h2 style="text-align:center">Play Distributions and Creating a 'Balanced' Offense</h2>
-	<p style ="text-align:center">bla bla bla - discuss importance of playcalling, how it relates to EPA. 
-									reasoning to include only passes, runs, sacks. benefits of exploring passes vs runs
+	<p style ="text-align:left"> how it relates to EPA. 
+									reasoning to include only passes, runs, sacks. 
 									
 									Observing a team's playcall tendencies is one of the most powerful advantages analytics can offer in sports.
 									It's very common for coaches around the league to talk at length about the importance of balance when it comes
 									to running or passing the football, often refferring to an even split between the two. But is this what a balanced offense actually means?
-									WSU Cougars head coach <a href="https://www.cbssports.com/college-football/news/mike-leach-sounds-off-on-the-concept-of-a-balanced-offense-thats-50-percent-stupid/">Mike Leach</a> spoke at the recent MIT Sloan sports analytics convention, 
+									WSU Cougars head coach <a href="https://www.cbssports.com/college-football/news/mike-leach-sounds-off-on-the-concept-of-a-balanced-offense-thats-50-percent-stupid/" style="text-align: center;">Mike Leach</a> spoke at the recent MIT Sloan sports analytics convention, 
 									and had the following to say when asked about the idea of "balance":
 									
-									<h3>"I want all of the positions to touch it," Leach said. "There's nothing balanced about 50 percent run, 
+									<h3 style="text-align: center;">"I want all of the positions to touch it," Leach said. "There's nothing balanced about 50 percent run, 
 									50 percent pass, because that's 50 percent stupid."</h3>
 									
 									Leach's point is essentially an offense can only be balanced if each skill position player has the same amount of touches. 
-									This is basically the concept of the 'Spread Offense'. 
+									This is basically the concept of the 'Spread Offense', short quick passes with the goal of exploiting space. The despute seems to 
+									be over the definition of balance, but not whether or not balance would be beneficial.
+									
+									I chose to investigate playcalling distributions to see whether or not there was a an influence on a teams
+									success due to how often they decided to run or pass. Simply by looking at last season's leaguewide averages, 
+									
 
 									</p>
 	
-	<div class="row">
-		<div class="column">
-			<img src ="IMG/PlayDistributions/LeagueAvg.png" style ="width:100%">
-		</div>
-		<div class="column">
-			<img id="imageToSwap" src="" style = "width:100%">
-		</div>
-	</div>
-	
-	
+
+		
+	<h2 style="text-align: center;">Visualising Play Distribution vs League Average</h2>
 	
 	<select id="myselection" onChange="swapImage()">
 	  <option value="">Select Team</option>
@@ -141,6 +139,16 @@
 	  <option value="IMG/PlayDistributions/JAX.png">Jaguars</option>
 	  <option value="IMG/PlayDistributions/TEN.png">Titans</option>
 	</select>
+	
+	<div class="row">
+		<div class="column">
+			<img src ="IMG/PlayDistributions/LeagueAvg.png" style ="width:100%">
+		</div>
+		<div class="column">
+			<img id="imageToSwap" src="" style = "width:100%">
+		</div>
+	</div>
+		
 	
 	<script type = "text/javascript">
 	function swapImage(){
