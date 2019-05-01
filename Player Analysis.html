@@ -45,6 +45,21 @@
 		li a:hover{
 			background-color: #111;
 		}
+		
+		*{
+			box-sizing: border-box;
+		}
+		.column{
+			float: left;
+			width: 50%;
+			padding: 5px;
+		}
+			
+		.row::after{
+			content: "";
+			clear: both;
+			display: table;
+			}
 	</style>
   </head>
   <body>
@@ -68,11 +83,11 @@
 			<p> asdhaskjhdaksjhdkjshadkjashd</p>
 		</div>
 	</div>
-	
-<hr>	
+		
 
 </div>		
 
+<hr>
       <footer>
         <p class="view"><a href="https://github.com/LiamCullenCS/ELO-Ratings">View the Project on GitHub <small>LiamCullenCS - BoxCount</small></a></p>    
       </footer>
