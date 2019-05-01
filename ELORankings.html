@@ -97,9 +97,9 @@
     function arrayToTable(tableData) {
         var table = $('<table cellspacing="0" style="border-spacing: 0;"></table>');
         $(tableData).each(function (i, rowData) {
-            var row = $('<tr></tr>');
+            var row = $('<tr style="padding: 1px;"></tr>');
             $(rowData).each(function (j, cellData) {
-                row.append($('<td style="padding: 0;">'+cellData+'</td>'));
+                row.append($('<td style="padding: 1px;">'+cellData+'</td>'));
             });
             table.append(row);
         });
