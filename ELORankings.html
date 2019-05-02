@@ -162,7 +162,7 @@
 
     $.ajax({
         type: "GET",
-        url: "ELO Rankings.csv",
+        url: "ELO Rankings1.csv",
         success: function (data) {
             $('body').append(arrayToTable(Papa.parse(data).data));
         }
